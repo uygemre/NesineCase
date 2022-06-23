@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/material_8dp">
+
+    <RelativeLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivPostLogo"
+            android:layout_width="@dimen/material_80dp"
+            android:layout_height="@dimen/material_80dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_4dp"
+            android:layout_toEndOf="@id/ivPostLogo"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:text="@string/dev_text_title" />
+
+        <TextView
+            android:id="@+id/tvBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginStart="@dimen/material_4dp"
+            android:layout_toEndOf="@id/ivPostLogo"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="@string/dev_text_body"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rootView"
+        android:layout_marginStart="@dimen/material_4dp"
+        android:layout_marginTop="@dimen/material_16dp"
+        android:layout_marginEnd="@dimen/material_4dp"
+        android:background="@color/wild_sand" />
+
+</RelativeLayout>
